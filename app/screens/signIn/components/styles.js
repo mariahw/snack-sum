@@ -33,6 +33,7 @@ const Styles = {
   },
 
   form: {
+    marginBottom: 12.5
   },
 
   item: {
@@ -46,6 +47,20 @@ const Styles = {
 
   input: {
     fontWeight: 'bold',
+  },
+
+  inputIconContainer: {
+    backgroundColor: constants.EMPHASIS_COLOR,
+    opacity: 0.55,
+    height: 50,
+    width: 55,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  inputIcon: {
+    height: 40,
+    width: 40,
   },
 
   submit: {
@@ -66,11 +81,16 @@ const Styles = {
 
   quote: {
     fontSize: 22.5,
+    marginBottom: 5
   },
 
   quoteEmphasis: {
     fontWeight: "bold",
     color: constants.EMPHASIS_COLOR,
+  },
+
+  citation: {
+    fontSize: 17.5,
   }
 
 }
