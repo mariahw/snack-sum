@@ -1,7 +1,7 @@
 //frontend
 
 import React, { Component } from 'react';
-import { Text, View, Button, Image, Dimensions} from 'react-native';
+import { Text, View, Button, Image, Dimensions, TouchableHighlight, StatusBar } from 'react-native';
 import { Container, Content, Form, Item, Input } from 'native-base';
 import * as constants from '../constants';
 import styles from './styles';
@@ -16,27 +16,39 @@ class SignInRender extends Component {
   render() {
     return (
 
-      <Container>
+      <Container style={styles.container} >
 
-        <Content>
+        <StatusBar hidden={true} />
 
-          <Image
-            source={{ uri: constants.BACKGROUND_SCREEN }}
-            style={styles.imageContainer}
-          >
+        <Image source={{ uri: constants.BACKGROUND_SCREEN }} style={styles.imageContainer}>
 
-            <Form>
-              <Item>
-                <Input placeholder="first name" />
-              </Item>
-              <Item>
-                <Input placeholder="last name" />
-              </Item>
-            </Form>
+          <View id="flex-padding" style={styles.flexPadding}></View>
 
-          </Image>
+          <View style={styles.content}>
 
-        </Content>
+              <Form
+                style={styles.form}
+              >
+                <Item regular style={styles.item}>
+                  <Input style={styles.input} placeholder="first name" />
+                </Item>
+                <Item regular style={styles.item}>
+                  <Input style={styles.input} placeholder="last name" />
+                </Item>
+
+                <TouchableHighlight style={styles.submit}>
+                  <Text style={styles.submitButtonText}>yyyyuuuuummm</Text>
+                </ TouchableHighlight>
+
+              </Form>
+
+              <Text style={styles.quote}>
+                <Text style={styles.quoteEmphasis}>obesity</Text> is a word found only in the dictionary of fools
+              </Text>
+
+          </View>
+
+        </Image>
 
       </Container>
 
