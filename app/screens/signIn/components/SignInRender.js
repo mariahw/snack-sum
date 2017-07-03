@@ -1,13 +1,32 @@
 //frontend
 
 import React, { Component } from 'react';
-import { Text, View, Button, Image, Dimensions, TouchableHighlight, StatusBar } from 'react-native';
+import { Text, View, Button, Image, Dimensions, TouchableHighlight, StatusBar, TextInput } from 'react-native';
 import { Container, Content, Form, Item, Input, Icon } from 'native-base';
 import * as constants from '../constants';
 import styles from './styles';
+import { Field, reduxForm } from 'redux-form'
 
 const deviceHeight = Dimensions.get('window').height;
 const deviceWidth = Dimensions.get('window').width;
+
+class renderInput extends Component {
+  render(){
+    const { input: {placeholderText, value, onChange} } = this.props;
+
+    return (
+      <Input
+        style={styles.input}
+        placeholder={placeholderText}
+        onChangeText={(value) => onChange(value)}
+        value={value}
+      />
+    )
+
+  }
+
+
+}
 
 class SignInRender extends Component {
 
@@ -30,16 +49,30 @@ class SignInRender extends Component {
                 style={styles.form}
               >
                 <Item regular style={styles.item}>
-                  <Input style={styles.input} placeholder="first name" />
+
+                  <Field
+                    name="firstName"
+                    component={renderInput}
+                    placeholderText="first Name"
+                  />
+
                   <View style={styles.inputIconContainer}>
                     <Image style={styles.inputIcon} source={{uri: constants.INPUT_SUCCESS_ICON}}/>
                   </View>
+
                 </Item>
                 <Item regular style={styles.item}>
-                  <Input style={styles.input} placeholder="last name" />
+
+                  <Field
+                    name="lastName"
+                    component={renderInput}
+                    placeholderText="last name"
+                  />
+
                   <View style={styles.inputIconContainer}>
                     <Image style={styles.inputIcon} source={{uri: constants.INPUT_SUCCESS_ICON}}/>
                   </View>
+
                 </Item>
 
                 <TouchableHighlight style={styles.submit}>
@@ -65,5 +98,10 @@ class SignInRender extends Component {
     );
   }
 }
+
+SignInRender = reduxForm({
+  // a unique name for the form
+  form: 'sign-in'
+})(SignInRender)
 
 export default SignInRender;

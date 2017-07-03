@@ -1,11 +1,11 @@
-// import * as actions from './actions';
+//import * as actions from './actions';
 import * as components from './components';
 import * as constants from './constants';
-// import reducer from './reducer';
+import reducer from './reducer';
 
 export default {
-  // actions,
+  //actions,
   components,
   constants,
-  // reducer
+  reducer
 };
