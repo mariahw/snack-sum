@@ -2,7 +2,7 @@ import * as types from './actionTypes';
 import * as constants from './constants';
 const initialState = {
   username: {},
-  userpassword:{}
+  userpassword: {}
 }
 
 export default function reducer(state = initialState, action) {
@@ -15,7 +15,10 @@ export default function reducer(state = initialState, action) {
       return Object.assign({}, state, { userpassword: action.payload});
 
     case types.SUBMIT_NEW_USER:
-      return state;
+    return Object.assign({}, state, {
+      username: action.payload.email,
+      userpassword: action.payload.password,
+    });
 
     default:
       return state;

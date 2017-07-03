@@ -33,6 +33,9 @@ class SignInRender extends Component {
   constructor(props){ super(props) }
 
   render() {
+
+    const { handleSubmit } = this.props
+
     return (
 
       <Container style={styles.container} >
@@ -51,9 +54,9 @@ class SignInRender extends Component {
                 <Item regular style={styles.item}>
 
                   <Field
-                    name="firstName"
+                    name="email"
                     component={renderInput}
-                    placeholderText="first Name"
+                    placeholderText="email"
                   />
 
                   <View style={styles.inputIconContainer}>
@@ -64,9 +67,9 @@ class SignInRender extends Component {
                 <Item regular style={styles.item}>
 
                   <Field
-                    name="lastName"
+                    name="password"
                     component={renderInput}
-                    placeholderText="last name"
+                    placeholderText="password"
                   />
 
                   <View style={styles.inputIconContainer}>
@@ -75,7 +78,11 @@ class SignInRender extends Component {
 
                 </Item>
 
-                <TouchableHighlight style={styles.submit}>
+                <TouchableHighlight
+                  style={styles.submit}
+                  onPress={handleSubmit(this.props.onSubmit)}
+                  type="submit"
+                >
                   <Text style={styles.submitButtonText}>yyyyuuuuummm</Text>
                 </ TouchableHighlight>
 
