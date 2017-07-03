@@ -14,13 +14,13 @@ const initialState = {
       cupcake: {
         active: false,
       },
-      milkShake: {
+      milkshake: {
         active: false,
       },
       cookie: {
         active: false,
       },
-      iceCream: {
+      icecream: {
         active: false,
       },
       macaroon: {

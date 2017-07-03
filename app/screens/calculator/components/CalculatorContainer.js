@@ -18,7 +18,7 @@ class CalculatorContainer extends Component {
 
   buttonPress(buttonVal){
     this.props.actions.buttonActive(buttonVal)
-    console.log(this.props.ui.calculatorValues.doughnut)
+    console.log(this.props.ui.calculatorValues[buttonVal])
   }
 
   buttonToggleActive(buttonVal){
@@ -33,8 +33,7 @@ class CalculatorContainer extends Component {
     return (
       <CalculatorRender
         buttonPress={this.buttonPress}
-        //buttonActive={this.props.ui.calculatorValues.doughnut.active}
-        buttonsState={buttonsUI}
+        buttonsState={ buttonsUI }
       />
     );
   }

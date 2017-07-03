@@ -32,29 +32,65 @@ class CalculatorRender extends Component {
 
               <CalculatorButton
                 buttonVal="doughnut"
-                activeBackgroundColor="rgba(235, 35, 41, 1)"
                 pressFunctionCallback={ this.props.buttonPress }
-                buttonsUIVal={ this.props.buttonsState }
+                buttonsState={ this.props.buttonsState.doughnut.active }
               />
 
-              <CalculatorButton buttonVal="cake" />
-              <CalculatorButton buttonVal="cupcake" />
+              <CalculatorButton
+                buttonVal="cake"
+                pressFunctionCallback={ this.props.buttonPress }
+                buttonsState={ this.props.buttonsState.cake.active }
+              />
+
+              <CalculatorButton
+                buttonVal="cupcake"
+                pressFunctionCallback={ this.props.buttonPress }
+                buttonsState={ this.props.buttonsState.cupcake.active }
+              />
 
             </View>
 
             <View style={styles.row}>
 
-              <CalculatorButton buttonVal="milkshake" />
-              <CalculatorButton buttonVal="cookie" />
-              <CalculatorButton buttonVal="iceCream" />
+              <CalculatorButton
+                buttonVal="milkshake"
+                pressFunctionCallback={ this.props.buttonPress }
+                buttonsState={ this.props.buttonsState.milkshake.active }
+              />
+
+              <CalculatorButton
+                buttonVal="cookie"
+                pressFunctionCallback={ this.props.buttonPress }
+                buttonsState={ this.props.buttonsState.cookie.active }
+              />
+
+              <CalculatorButton
+                buttonVal="icecream"
+                pressFunctionCallback={ this.props.buttonPress }
+                buttonsState={ this.props.buttonsState.icecream.active }
+              />
 
             </View>
 
             <View style={styles.row}>
 
-              <CalculatorButton buttonVal="macaron" />
-              <CalculatorButton buttonVal="candy" />
-              <CalculatorButton buttonVal="popcorn" />
+              <CalculatorButton
+                buttonVal="macaroon"
+                pressFunctionCallback={ this.props.buttonPress }
+                buttonsState={ this.props.buttonsState.macaroon.active }
+              />
+
+              <CalculatorButton
+                buttonVal="candy"
+                pressFunctionCallback={ this.props.buttonPress }
+                buttonsState={ this.props.buttonsState.candy.active }
+              />
+
+              <CalculatorButton
+                buttonVal="popcorn"
+                pressFunctionCallback={ this.props.buttonPress }
+                buttonsState={ this.props.buttonsState.popcorn.active }
+              />
 
             </View>
 
