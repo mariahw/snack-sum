@@ -61,7 +61,8 @@ export default function reducer(state = initialState, action) {
           ...state.ui.calculatorValues,
           [action.payload]: {
             ...state.ui.calculatorValues[action.payload],
-            active: true
+            // FULL PATH??
+            active: !(calculatorValues[action.payload].active)
           }
         }
       }
