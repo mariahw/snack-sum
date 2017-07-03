@@ -8,7 +8,6 @@ const CalculatorButton = ({ props, buttonVal, pressFunctionCallback, buttonActiv
     <TouchableHighlight
       style={[
         styles.calculatorButton,
-        buttonsUIVal ? {backgroundColor: "blue"} : {backgroundColor: "red"}
       ]}
       onPress={ () => { pressFunctionCallback(buttonVal) }}
     >

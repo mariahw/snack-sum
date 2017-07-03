@@ -26,8 +26,8 @@ class CalculatorContainer extends Component {
 
   render() {
 
-    const buttons = this.props;
-    let buttonsUI = buttons.ui.calculatorValues;
+    const { ui } = this.props;
+    let buttonsUI = ui.calculatorValues;
 
     return (
       <CalculatorRender
