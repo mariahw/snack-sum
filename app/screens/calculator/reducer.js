@@ -6,31 +6,31 @@ const initialState = {
   ui:{
     calculatorValues: {
       doughnut: {
-        active: "false",
+        active: false,
       },
       cake: {
-        active: "false",
+        active: false,
       },
       cupcake: {
-        active: "false",
+        active: false,
       },
       milkShake: {
-        active: "false",
+        active: false,
       },
       cookie: {
-        active: "false",
+        active: false,
       },
       iceCream: {
-        active: "false",
+        active: false,
       },
       macaroon: {
-        active: "false",
+        active: false,
       },
       candy: {
-        active: "false",
+        active: false,
       },
       popcorn: {
-        active: "false",
+        active: false,
       },
     }
   }
@@ -43,13 +43,28 @@ export default function reducer(state = initialState, action) {
     case types.CALCULATOR_INPUT:
       return {
           ...state,
-          userinput: state.userinput.concat(action.payload)
+          userinput: state.userinput.concat(action.payload),
       }
 
     case types.CALCULATOR_CLEAR:
     return {
       ...state,
       userinput: [ ]
+    }
+
+    case types.BUTTON_ACTIVE:
+    return {
+      ...state,
+      ui: {
+        ...state.ui,
+        calculatorValues: {
+          ...state.ui.calculatorValues,
+          [action.payload]: {
+            ...state.ui.calculatorValues[action.payload],
+            active: true
+          }
+        }
+      }
     }
 
     case types.CALCULATOR_SUBMIT:

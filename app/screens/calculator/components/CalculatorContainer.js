@@ -17,7 +17,7 @@ class CalculatorContainer extends Component {
 
   buttonPress(buttonVal){
     console.log(buttonVal)
-    this.props.actions.buttonInput(buttonVal)
+    this.props.actions.buttonActive(buttonVal)
     console.log(this)
   }
 
@@ -25,6 +25,7 @@ class CalculatorContainer extends Component {
     return (
       <CalculatorRender
         buttonSelect={this.buttonPress}
+        buttonActive={this.props.ui.calculatorValues.doughnut.active}
       />
     );
   }

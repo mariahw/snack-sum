@@ -51,6 +51,7 @@ class CalculatorRender extends Component {
                 buttonVal="doughnut"
                 activeBackgroundColor="rgba(235, 35, 41, 1)"
                 pressFunction={ () => this.props.buttonSelect("doughnut") }
+                buttonActive={this.props.buttonActive}
               />
               <CalculatorButton buttonVal="cake" />
               <CalculatorButton buttonVal="cupcake" />

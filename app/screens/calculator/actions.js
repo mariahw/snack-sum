@@ -7,6 +7,14 @@ export function buttonInput(buttonVal) {
     };
 }
 
+export function buttonActive(buttonVal) {
+    return {
+        type: types.BUTTON_ACTIVE,
+        payload: buttonVal
+    };
+}
+
+
 export function submitCalculatorSearch(newUserObject) {
     console.log(newUserObject)
     return {
