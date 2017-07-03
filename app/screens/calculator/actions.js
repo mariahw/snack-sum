@@ -1,7 +1,6 @@
 import * as types from './actionTypes';
 
 export function buttonInput(buttonVal) {
-    console.log(newUserObject)
     return {
         type: types.CALCULATOR_INPUT,
         payload: buttonVal

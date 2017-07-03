@@ -17,7 +17,7 @@ class CalculatorContainer extends Component {
 
   buttonPress(buttonVal){
     console.log(buttonVal)
-    // this.props.actions.buttonInput(buttonVal)
+    this.props.actions.buttonInput(buttonVal)
     console.log(this)
   }
 
