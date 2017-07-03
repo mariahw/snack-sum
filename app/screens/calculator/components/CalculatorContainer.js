@@ -33,7 +33,7 @@ class CalculatorContainer extends Component {
     return (
       <CalculatorRender
         buttonPress={this.buttonPress}
-        buttonActive={this.props.ui.calculatorValues.doughnut.active}
+        //buttonActive={this.props.ui.calculatorValues.doughnut.active}
         buttonsState={buttonsUI}
       />
     );
