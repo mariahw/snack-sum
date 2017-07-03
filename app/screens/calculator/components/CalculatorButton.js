@@ -3,10 +3,13 @@ import { Text, View, Button, Image, Dimensions, TouchableHighlight, StatusBar, T
 import { Container, Content, Form, Item, Input, Icon } from 'native-base';
 import styles from './styles';
 
-const CalculatorButton = ({ props, buttonVal, pressFunctionCallback, buttonActive, activeBackgroundColor }) => {
+const CalculatorButton = ({ props, buttonVal, pressFunctionCallback, buttonActive, activeBackgroundColor, activeProp, buttonsUIVal }) => {
   return (
     <TouchableHighlight
-      style={[ styles.calculatorButton]}
+      style={[
+        styles.calculatorButton,
+        buttonsUIVal ? {backgroundColor: "blue"} : {backgroundColor: "red"}
+      ]}
       onPress={ () => { pressFunctionCallback(buttonVal) }}
     >
       <Image
