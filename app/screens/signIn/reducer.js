@@ -2,7 +2,12 @@ import * as types from './actionTypes';
 import * as constants from './constants';
 const initialState = {
   username: {},
-  userpassword: {}
+  userpassword: {},
+  ui: {
+    usernameFieldIdle: "true",
+    userpasswordFieldIdle: "true",
+    submitButtonActive: "false"
+  }
 }
 
 export default function reducer(state = initialState, action) {
