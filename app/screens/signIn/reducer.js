@@ -1,5 +1,6 @@
 import * as types from './actionTypes';
 import * as constants from './constants';
+
 const initialState = {
   username: {},
   userpassword: {},
