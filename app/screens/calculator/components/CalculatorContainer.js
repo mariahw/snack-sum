@@ -13,6 +13,7 @@ class CalculatorContainer extends Component {
     super(props)
 
     this.buttonPress = this.buttonPress.bind(this)
+    this.buttonToggleActive = this.buttonToggleActive.bind(this)
   }
 
   buttonPress(buttonVal){
@@ -21,10 +22,14 @@ class CalculatorContainer extends Component {
     console.log(this)
   }
 
+  buttonToggleActive(buttonVal){
+    this.props.actions.buttonActive(buttonVal)
+  }
+
   render() {
     return (
       <CalculatorRender
-        buttonSelect={this.buttonPress}
+        buttonPress={this.buttonPress}
         buttonActive={this.props.ui.calculatorValues.doughnut.active}
       />
     );

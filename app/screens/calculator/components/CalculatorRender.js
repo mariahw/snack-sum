@@ -5,27 +5,10 @@ import { Text, View, Button, Image, Dimensions, TouchableHighlight, StatusBar, T
 import { Container, Content, Form, Item, Input, Icon } from 'native-base';
 import * as constants from '../constants';
 import styles from './styles';
+import CalculatorButton from './CalculatorButton'
 
 const deviceHeight = Dimensions.get('window').height;
 const deviceWidth = Dimensions.get('window').width;
-
-const CalculatorButton = ({ buttonVal, pressFunction, buttonActive, activeBackgroundColor, buttonSelect }) => {
-  return (
-    <TouchableHighlight
-      style={[
-        styles.calculatorButton,
-        buttonActive ? { backgroundColor: activeBackgroundColor } : {},
-        buttonActive ? { opacity: 1 } : { opacity: 0.65 }
-      ]}
-      onPress={pressFunction}
-    >
-      <Image
-        style={ styles.calculatorButtonImage }
-        source={{uri: ('calculatorButton-' + buttonVal)}}
-      />
-    </TouchableHighlight>
-  )
-}
 
 class CalculatorRender extends Component {
 
@@ -50,9 +33,9 @@ class CalculatorRender extends Component {
               <CalculatorButton
                 buttonVal="doughnut"
                 activeBackgroundColor="rgba(235, 35, 41, 1)"
-                pressFunction={ () => this.props.buttonSelect("doughnut") }
-                buttonActive={this.props.buttonActive}
+                pressFunctionCallback={ this.props.buttonPress }
               />
+
               <CalculatorButton buttonVal="cake" />
               <CalculatorButton buttonVal="cupcake" />
 

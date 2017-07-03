@@ -1,0 +1,20 @@
+import React from 'react';
+import { Text, View, Button, Image, Dimensions, TouchableHighlight, StatusBar, TextInput } from 'react-native';
+import { Container, Content, Form, Item, Input, Icon } from 'native-base';
+import styles from './styles';
+
+const CalculatorButton = ({ props, buttonVal, pressFunctionCallback, buttonActive, activeBackgroundColor }) => {
+  return (
+    <TouchableHighlight
+      style={[ styles.calculatorButton]}
+      onPress={ () => { pressFunctionCallback(buttonVal) }}
+    >
+      <Image
+        style={ styles.calculatorButtonImage }
+        source={{uri: ('calculatorButton-' + buttonVal)}}
+      />
+    </TouchableHighlight>
+  )
+}
+
+export default CalculatorButton ;
