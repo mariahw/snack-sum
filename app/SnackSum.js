@@ -6,9 +6,11 @@ import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 
 import signIn from './screens/signIn'
+import calculator from './screens/calculator'
 
 const store = configureStore();
 const { SignIn } = signIn.components
+const { Calculator } = calculator.components
 
 
 class SnackSum extends React.Component {
@@ -20,7 +22,7 @@ class SnackSum extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <SignIn />
+        <Calculator />
       </Provider>
     )
   }

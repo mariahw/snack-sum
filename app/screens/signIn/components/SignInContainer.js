@@ -1,5 +1,3 @@
-//logic
-
 import React, { Component } from 'react'
 import SignInRender from './SignInRender'
 import { connect } from 'react-redux'
