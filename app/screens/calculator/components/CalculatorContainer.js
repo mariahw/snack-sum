@@ -14,6 +14,7 @@ class CalculatorContainer extends Component {
 
     this.buttonPress = this.buttonPress.bind(this)
     this.buttonToggleActive = this.buttonToggleActive.bind(this)
+    this.clearCalculatorSearch = this.clearCalculatorSearch.bind(this)
   }
 
   buttonPress(buttonVal){
@@ -25,6 +26,10 @@ class CalculatorContainer extends Component {
     this.props.actions.buttonActive(buttonVal)
   }
 
+  clearCalculatorSearch(){
+    this.props.actions.clearCalculatorSearch();
+  }
+
   render() {
 
     const { ui } = this.props;
@@ -34,6 +39,7 @@ class CalculatorContainer extends Component {
       <CalculatorRender
         buttonPress={this.buttonPress}
         buttonsState={ buttonsUI }
+        clearSearch={ this.clearCalculatorSearch }
       />
     );
   }

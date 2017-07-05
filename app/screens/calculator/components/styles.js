@@ -23,9 +23,18 @@ const Styles = {
     flexDirection: "column"
   },
 
-  flexPadding: {
+  functionalContainer: {
     backgroundColor: "transparent",
-    flex: 0.40 ,
+    flex: 0.40,
+    flexDirection: "row",
+    paddingLeft: 30,
+  },
+
+  functionalButton: {
+    backgroundColor: "rgba(161, 218, 232, 1)",
+    width: 60,
+    height: 60,
+    marginTop: 30
   },
 
   content: {

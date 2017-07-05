@@ -6,6 +6,7 @@ import { Container, Content, Form, Item, Input, Icon } from 'native-base';
 import * as constants from '../constants';
 import styles from './styles';
 import CalculatorButton from './CalculatorButton'
+import FunctionalButton from './FunctionalButton'
 
 const deviceHeight = Dimensions.get('window').height;
 const deviceWidth = Dimensions.get('window').width;
@@ -24,7 +25,18 @@ class CalculatorRender extends Component {
 
         <Image source={{ uri: constants.BACKGROUND_SCREEN }} style={styles.imageContainer}>
 
-          <View id="flex-padding" style={styles.flexPadding}></View>
+          <View id="flex-padding" style={styles.functionalContainer}>
+
+            <FunctionalButton
+              symbol = "CE"
+              pressFunction = { this.props.clearCalculatorSearch }
+            />
+
+            <FunctionalButton
+              symbol = "="
+            />
+
+          </View>
 
           <View style={styles.content}>
 
