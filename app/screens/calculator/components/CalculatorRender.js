@@ -29,7 +29,7 @@ class CalculatorRender extends Component {
 
             <FunctionalButton
               symbol = "CE"
-              pressFunction = { this.props.clearCalculatorSearch }
+              pressFunction = { this.props.clearSearch }
             />
 
             <FunctionalButton

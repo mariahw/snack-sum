@@ -27,6 +27,7 @@ class CalculatorContainer extends Component {
   }
 
   clearCalculatorSearch(){
+    console.log("clearHit")
     this.props.actions.clearCalculatorSearch();
   }
 
