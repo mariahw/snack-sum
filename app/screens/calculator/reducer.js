@@ -47,10 +47,8 @@ export default function reducer(state = initialState, action) {
       }
 
     case types.CALCULATOR_CLEAR:
-    return {
-      ...state,
-      userinput: [ ]
-    }
+    // is this manupulating state?
+    return { ...initialState }
 
     case types.BUTTON_ACTIVE:
     return {

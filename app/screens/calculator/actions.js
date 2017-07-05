@@ -15,6 +15,13 @@ export function buttonActive(buttonVal) {
 }
 
 
+export function clearCalculatorSearch(buttonVal) {
+    return {
+        type: types.CALCULATOR_CLEAR,
+        payload: buttonVal
+    };
+}
+
 export function submitCalculatorSearch(newUserObject) {
     console.log(newUserObject)
     return {
