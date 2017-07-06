@@ -3,9 +3,9 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as constants from  '../constants'
 import * as actions from  '../actions'
-import SearchReturnRender from './SearchReturnRender'
+import SearchResultsRender from './SearchResultsRender'
 
-class SearchReturnContainer extends Component {
+class SearchResultsContainer extends Component {
 
   constructor(props){
     super(props)
@@ -15,7 +15,7 @@ class SearchReturnContainer extends Component {
   render() {
 
     return (
-      <SearchReturnRender
+      <SearchResultsRender
       />
     );
   }
@@ -34,4 +34,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchReturnContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchResultsContainer);

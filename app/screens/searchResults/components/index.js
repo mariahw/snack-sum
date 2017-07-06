@@ -1,5 +1,5 @@
-import Calculator from './SearchReturnContainer';
+import SearchResults from './SearchResultsContainer';
 
 export {
-  SearchReturn
+  SearchResults
 };
