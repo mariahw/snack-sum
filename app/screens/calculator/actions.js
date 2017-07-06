@@ -22,10 +22,9 @@ export function clearCalculatorSearch(buttonVal) {
     };
 }
 
-export function submitCalculatorSearch(newUserObject) {
-    console.log(newUserObject)
+export function submitCalculatorSearch(userSearchQuery) {
     return {
-        type: types.SUBMIT_NEW_USER,
-        payload: newUserObject
+        type: types.CALCULATOR_SUBMIT,
+        payload: userSearchQuery
     };
 }

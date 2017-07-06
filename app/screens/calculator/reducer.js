@@ -66,10 +66,10 @@ export default function reducer(state = initialState, action) {
     }
 
     case types.CALCULATOR_SUBMIT:
-    return Object.assign({}, state, {
-      username: action.payload.email,
-      userpassword: action.payload.password,
-    });
+    return {
+    ... state,
+    userinput: [ ...state.userinput.concat(action.payload) ]
+    }
 
     default:
       return state;

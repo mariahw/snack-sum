@@ -34,6 +34,7 @@ class CalculatorRender extends Component {
 
             <FunctionalButton
               symbol = "="
+              pressFunction = { this.props.submitSearch }
             />
 
           </View>
