@@ -68,7 +68,7 @@ export default function reducer(state = initialState, action) {
     case types.CALCULATOR_SUBMIT:
     return {
     ... state,
-    userinput: [ ...state.userinput.concat(action.payload) ]
+    userinput: [ ...initialState.userinput.concat(action.payload) ]
     }
 
     default:
