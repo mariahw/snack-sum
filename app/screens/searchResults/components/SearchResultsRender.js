@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import * as constants from  '../constants'
 import * as actions from  '../actions'
-// import * as styles from  './styles'
+import constants from  '../constants'
+import styles from  './styles'
 import { Text, View, Button, Image, Dimensions, ScrollView, TouchableHighlight, StatusBar, TextInput } from 'react-native';
 import { Container, Content, Form, Item, Input, Icon } from 'native-base';
 import SearchReturnObject from './SearchReturnObject'
@@ -20,7 +20,7 @@ class SearchResultRender extends Component {
 
     return (
 
-      < Container style={styles.container} >
+      <Container style={styles.container}>
 
         <StatusBar hidden={ true } />
 
@@ -33,7 +33,7 @@ class SearchResultRender extends Component {
             style={styles.paddedContainer}
           >
 
-            <ScrollView style={styles.resultsList}>
+            <View style={styles.resultsList}>
 
               <View
                 id="flex-padding"
@@ -50,17 +50,20 @@ class SearchResultRender extends Component {
               </View>
 
 
-              <View
+              <ScrollView
                 id="flex-padding"
                 style={styles.interiorContainer}
               >
 
-                <SearchReturnObject />
-                <SearchReturnObject />
+                <SearchReturnObject
+                  emphasisColor={'rgba(231, 81, 107, 1)'}
+                />
+                <SearchReturnObject
+                  emphasisColor={'rgba(231, 81, 107, 1)'}
+                />
+              </ScrollView>
 
-              </View>
-
-            </ScrollView>
+            </View>
 
           </View>
 
@@ -73,67 +76,3 @@ class SearchResultRender extends Component {
 }
 
 export default SearchResultRender;
-
-const styles = {
-
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-  },
-
-  imageContainer: {
-    backgroundColor: 'yellow',
-    flex: 1,
-    flexDirection: "row",
-    width: deviceWidth
-  },
-
-  paddedContainer: {
-    width: deviceWidth
-  },
-
-  resultsList: {
-    flex: 1,
-    flexDirection: 'row',
-    width: deviceWidth
-  },
-
-  paddedInteriorContainer: {
-    flex: 0.65,
-    alignItems: "flex-end",
-    justifyContent: "center",
-    marginRight: 30
-  },
-
-  quoteText: {
-    fontSize: 25,
-    color: "white",
-    position: "absolute",
-    width: (deviceWidth / 2),
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingTop: 15,
-    paddingBottom: 15,
-    backgroundColor: constants.EMPHASIS_COLOR_SEMI_TRANSPARENT,
-  },
-
-  quoteHightlight: {
-    backgroundColor: 'transparent',
-    color: constants.PRIMARY_COLOR,
-  },
-
-  quoteCitation: {
-    backgroundColor: 'transparent',
-    color: constants.EMPHASIS_COLOR,
-    fontSize: 20,
-    textAlign: "left",
-    marginTop: 222.5,
-  },
-
-  interiorContainer: {
-    backgroundColor: "yellow",
-    flex: 0.35,
-  }
-
-
-}
