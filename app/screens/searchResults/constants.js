@@ -1,0 +1,5 @@
+export const NAME = 'searchResults'
+export const LIKE_ICON = 'heart'
+export const BACKGROUND_SCREEN = 'ice-cream-stack-yellow-background'
+export const EMPHASIS_COLOR = 'rgba(231, 81, 107, 1)'
+export const PRIMARY_COLOR = 'rgba(241, 234, 55, 1)'
