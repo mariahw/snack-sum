@@ -37,12 +37,12 @@ const SearchReturnObject = ({ props, buttonVal, pressFunctionCallback, buttonsSt
             Stans{"\n"}Doughnuts
           </Text>
           <Text style={styles.hours}>
-            June 23, 2017 {"\n"} 8pm -8pm
+            <Text style={styles.hoursEmph}>June 23, 2017</Text> {"\n"} 8pm -8pm
           </Text>
         </View>
 
         <TouchableHighlight style={styles.favoriteIcon}>
-          <Image source={{uri: constants.LIKE_ICON}}></Image>
+          <Image style={styles.favoriteIconImage} source={{uri: 'heart'}}></Image>
         </TouchableHighlight>
 
       </View>
@@ -119,11 +119,23 @@ const styles = {
     flex: 0.5
   },
 
+  hoursEmph: {
+    fontWeight: "bold"
+  },
+
   favoriteIcon: {
     backgroundColor: constants.EMPHASIS_COLOR,
     flex: 0.25,
-    opacity: 0.5
+    opacity: 0.5,
+    justifyContent: "center",
+    alignItems: "center"
   },
+
+  favoriteIconImage: {
+    height: 50,
+    width: 50,
+    backgroundColor: "green",
+  }
 
 
 }

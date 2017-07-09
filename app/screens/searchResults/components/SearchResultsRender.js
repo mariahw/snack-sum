@@ -38,7 +38,16 @@ class SearchResultRender extends Component {
               <View
                 id="flex-padding"
                 style={styles.paddedInteriorContainer}
-              ></View>
+              >
+
+                <Text style={styles.quoteText}>
+                  <Text style={styles.quoteHightlight}>gluten free</Text> anywhere, is a threat to <Text style={styles.quoteHightlight}>gluten</Text> everywhere
+                </Text>
+                <Text style={styles.quoteCitation}>
+                  - elenore roosevelt
+                </Text>
+
+              </View>
 
 
               <View
@@ -91,6 +100,34 @@ const styles = {
 
   paddedInteriorContainer: {
     flex: 0.65,
+    alignItems: "flex-end",
+    justifyContent: "center",
+    marginRight: 30
+  },
+
+  quoteText: {
+    fontSize: 25,
+    color: "white",
+    position: "absolute",
+    width: (deviceWidth / 2),
+    paddingLeft: 15,
+    paddingRight: 15,
+    paddingTop: 15,
+    paddingBottom: 15,
+    backgroundColor: constants.EMPHASIS_COLOR_SEMI_TRANSPARENT,
+  },
+
+  quoteHightlight: {
+    backgroundColor: 'transparent',
+    color: constants.PRIMARY_COLOR,
+  },
+
+  quoteCitation: {
+    backgroundColor: 'transparent',
+    color: constants.EMPHASIS_COLOR,
+    fontSize: 20,
+    textAlign: "left",
+    marginTop: 222.5,
   },
 
   interiorContainer: {
